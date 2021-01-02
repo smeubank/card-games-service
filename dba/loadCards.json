@@ -1,0 +1,39 @@
+[
+    {
+        "objectType": "person",
+        "title": "Napoleon Bonaparte",
+        "cardId": "1234-1234-1234-1234",
+        "sort": 1,
+        "links": [
+            {
+                "link": "www.wiki.com/napoleon",
+                "linkType": "info"
+            },
+            {
+                "link": "www.img.com/1",
+                "linkType": "image"
+            },
+            {
+                "link": "www.img.com/2",
+                "linkType": "image"
+            }
+        ],
+        "tags": [
+            {
+                "tag": "europe"
+            },
+            {
+                "tag": "france"
+            },
+            {
+                "tag": "history"
+            },
+            {
+                "tag": "man"
+            },
+            {
+                "tag": "royalty"
+            }
+        ]
+    }
+]

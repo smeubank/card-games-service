@@ -1,0 +1,154 @@
+#import flask
+#from flask import request, jsonify
+
+app = flask.Flask(__name__)
+app.config['DEBUG'] = True
+
+# Create some test data for our catalog in the form of a list of dictionaries.
+cards = {
+    'cards': [
+        {
+            'objectType': 'person',
+            'title': 'Napoleon Bonaparte',
+            'cardId': 1,
+            'links': [
+                {'link': 'www.wiki.com/napoleon', 'linkType': 'info'},
+                {'link': 'www.img.com/1', 'linkType': 'image'},
+                {'link': 'www.img.com/2', 'linkType': 'image'}
+            ],
+            'tags': [
+                {
+                    'tag': 'europe'
+                },
+                {
+                    'tag': 'france'
+                },
+                {
+                    'tag': 'history'
+                },
+                {
+                    'tag': 'man'
+                },
+                {
+                    'tag': 'royalty'
+                }
+            ]
+        }
+    ]
+}
+
+
+users = {
+    'users': [
+        {
+            'userType': 'player',
+            'title': 'player1234',
+            'userId': 1,
+            'attributes': [],
+            'history': [],
+            'hashtags': [
+                {
+                    'tag': 'cool'
+                }
+            ]
+        }
+    ]
+}
+
+
+sessions = [
+    {
+        'sessionType': 'wam',
+        'title': 'xmasPartySession',
+        'sessionId': 1,
+        'active': True,
+        'rounds': [
+                {
+                    'roundId': 1
+                },
+                {
+                    'roundId': 5
+                }
+            ],
+            'hashTags': [
+                {
+                    'tag': 'wam'
+                }
+            ]
+        },
+        {
+        'sessionType': 'wam',
+        'title': 'xmas2PartySession',
+        'sessionId': 2,
+        'active': True,
+        'rounds': [
+                {
+                    'roundId': 1
+                },
+                {
+                    'roundId': 5
+                }
+            ],
+            'hashTags': [
+                {
+                    'tag': 'wam'
+                }
+            ]
+        }
+]
+
+
+rounds = {
+    'rounds': [
+        {
+            'roundType': 'wam',
+            'title': 'round1',
+            'roundId': 1,
+            'sessionId': 1,
+            'active': True,
+            'users': [
+                {
+                    'userId': 1,
+                    'role': 'participant',
+                    'order': '1',
+                    'turn': 'yes',
+                    'winner': 'NA',
+                    'cards': [
+                        {
+                            'cardId': 1
+                        }
+                    ]
+                },
+                {
+                    'userId': 5,
+                    'role': 'participant',
+                    'order': '2',
+                    'turn': 'no',
+                    'winner': 'NA',
+                    'cards': [
+                        {
+                            'cardId': 5
+                        }
+                    ]
+                },
+                {
+                    'userId': 9,
+                    'role': 'host',
+                    'order': '3',
+                    'turn': 'NA',
+                    'winner': 'NA',
+                    'cards': [
+                        {
+                            'cardId': 6
+                        }
+                    ]
+                }
+            ],
+            'hashTags': [
+                {
+                    'tag': 'wam'
+                }
+            ]
+        }
+    ]
+}
